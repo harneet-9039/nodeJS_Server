@@ -4,7 +4,7 @@ const fs = require('fs');
 var app = express();
 
 //for herokuapp
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 hbs.registerPartials(__dirname + '/views/partials');
 
