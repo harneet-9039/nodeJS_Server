@@ -3,6 +3,8 @@ const hbs = require('hbs'); //it's a view engine for rendering html pages
 const fs = require('fs');
 var app = express();
 
+//for herokuapp
+const port = process.env.port || 3000;
 
 hbs.registerPartials(__dirname + '/views/partials');
 
@@ -73,6 +75,6 @@ app.get('/badRequest', (request, response) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('server is up on port 3000');
+app.listen(port, () => {
+    console.log(`server is up on port ${port}`);
 });
